@@ -62,42 +62,75 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let node = SCNNode()
         node.addChildNode(planeNode)
         
-        let spacing: Float = 0.010
+        let spacing: Float = 0.030
         
         // Name text
-        let titleNode = textNode(cardDesc.name, font: UIFont.boldSystemFont(ofSize: 30))
+        let titleNode = textNode(cardDesc.name, font: UIFont.boldSystemFont(ofSize: 45))
         titleNode.pivotOnTopLeft()
-        
+       
         titleNode.position.x += Float(plane.width / 2) + spacing
         titleNode.position.y += Float(plane.height / 2)
+       
+         planeNode.addChildNode(titleNode)
         
-        planeNode.addChildNode(titleNode)
+        //Owner
+        let ownerName = textNode(cardDesc.ownerName, font: UIFont.boldSystemFont(ofSize: 40))
+        ownerName.pivotOnTopLeft()
+        
+        ownerName.position.x += Float(plane.width / 2) + spacing
+        ownerName.position.y = titleNode.position.y - titleNode.height - spacing
+        
+        planeNode.addChildNode(ownerName)
+        
+        //phone
+        let phone = textNode(cardDesc.phone, font: UIFont.boldSystemFont(ofSize: 34))
+        phone.pivotOnTopLeft()
+        
+        phone.position.x += Float(plane.width / 2) + spacing
+        phone.position.y = ownerName.position.y - ownerName.height - spacing
+        
+        planeNode.addChildNode(phone)
+        
+        //mail
+        let mail = textNode(cardDesc.mail, font: UIFont.boldSystemFont(ofSize: 34))
+        mail.pivotOnTopLeft()
+        
+        mail.position.x += Float(plane.width / 2) + spacing
+        mail.position.y = phone.position.y - phone.height - spacing
+        
+        planeNode.addChildNode(mail)
         
         // bio
         let bioNode = textNode(cardDesc.bio, font: UIFont.systemFont(ofSize: 30), maxWidth: 500)
         bioNode.pivotOnTopLeft()
         
         bioNode.position.x += Float(plane.width / 2) + spacing
-        bioNode.position.y = titleNode.position.y - titleNode.height - (spacing * 2)
+        bioNode.position.y = mail.position.y - mail.height - (spacing * 2)
         
         planeNode.addChildNode(bioNode)
-        print(bioNode)
         
         // video
-//        if let videoURL = Bundle.main.url(forResource: "zeppelinVid", withExtension: "mp4") {
+        var player: AVPlayer!
+        
+        let fileUrl = URL(fileURLWithPath: Bundle.main.path(forResource: "zeppelinVid", ofType: "mp4")!)
+        player = AVPlayer(url: fileUrl)
+        
         let video = SCNPlane(width: imageAnchor.referenceImage.physicalSize.width, height: imageAnchor.referenceImage.physicalSize.width / 8 * 5)
-
-//        video.firstMaterial?.diffuse.contents = SKVideoNode(fileNamed: "zeppelinVid")
-
+        video.firstMaterial?.diffuse.contents = player
+        
         let videoNode = SCNNode(geometry: video)
         videoNode.pivotOnTopCenter()
-
+        
         videoNode.position.y -= Float(plane.height / 2) + spacing
         
-        }
-         planeNode.addChildNode(videoNode)
-        return node
+        planeNode.addChildNode(videoNode)
+        player.play()
+        player.volume = 0
         
+//
+     
+        return node
+ 
     }
     
     func loadData() {

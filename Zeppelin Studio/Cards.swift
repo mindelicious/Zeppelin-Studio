@@ -11,7 +11,7 @@ import Foundation
 struct Card: Decodable {
     let name: String
     let ownerName: String
-    let tel: Int
+    let phone: String
     let mail: String
     let bio: String
    
