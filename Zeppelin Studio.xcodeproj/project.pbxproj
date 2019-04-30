@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C91910692277FBAB0000444D /* zeppelinVid.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C91910682277FBAB0000444D /* zeppelinVid.mp4 */; };
+		C919106B227815370000444D /* zeppelinVid.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C919106A227815360000444D /* zeppelinVid.mp4 */; };
 		C9413A4D2277195400440347 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9413A4C2277195400440347 /* AppDelegate.swift */; };
 		C9413A512277195400440347 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9413A502277195400440347 /* ViewController.swift */; };
 		C9413A542277195400440347 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9413A522277195400440347 /* Main.storyboard */; };
@@ -18,7 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C91910682277FBAB0000444D /* zeppelinVid.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = zeppelinVid.mp4; sourceTree = "<group>"; };
+		C919106A227815360000444D /* zeppelinVid.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = zeppelinVid.mp4; sourceTree = "<group>"; };
 		C9413A492277195400440347 /* Zeppelin Studio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Zeppelin Studio.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9413A4C2277195400440347 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9413A502277195400440347 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,7 +60,7 @@
 		C9413A4B2277195400440347 /* Zeppelin Studio */ = {
 			isa = PBXGroup;
 			children = (
-				C91910682277FBAB0000444D /* zeppelinVid.mp4 */,
+				C919106A227815360000444D /* zeppelinVid.mp4 */,
 				C9413A4C2277195400440347 /* AppDelegate.swift */,
 				C9413A502277195400440347 /* ViewController.swift */,
 				C9413A522277195400440347 /* Main.storyboard */,
@@ -132,7 +132,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9413A592277195500440347 /* LaunchScreen.storyboard in Resources */,
-				C91910692277FBAB0000444D /* zeppelinVid.mp4 in Resources */,
+				C919106B227815370000444D /* zeppelinVid.mp4 in Resources */,
 				C9413A562277195500440347 /* Assets.xcassets in Resources */,
 				C9413A542277195400440347 /* Main.storyboard in Resources */,
 				C9413A6422772A4300440347 /* cards.json in Resources */,
