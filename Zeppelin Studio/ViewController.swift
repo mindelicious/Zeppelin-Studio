@@ -64,7 +64,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         let spacing: Float = 0.030
         
-        // Name text
+        // Name
         let titleNode = textNode(cardDesc.name, font: UIFont.boldSystemFont(ofSize: 45))
         titleNode.pivotOnTopLeft()
        
@@ -82,7 +82,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         planeNode.addChildNode(ownerName)
         
-        //phone
+        //Phone
         let phone = textNode(cardDesc.phone, font: UIFont.boldSystemFont(ofSize: 34))
         phone.pivotOnTopLeft()
         
@@ -91,7 +91,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         planeNode.addChildNode(phone)
         
-        //mail
+        //Mail
         let mail = textNode(cardDesc.mail, font: UIFont.boldSystemFont(ofSize: 34))
         mail.pivotOnTopLeft()
         
@@ -100,7 +100,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         planeNode.addChildNode(mail)
         
-        // bio
+        //Bio
         let bioNode = textNode(cardDesc.bio, font: UIFont.systemFont(ofSize: 30), maxWidth: 500)
         bioNode.pivotOnTopLeft()
         
@@ -109,7 +109,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         planeNode.addChildNode(bioNode)
         
-        // video
+        //Video
         var player: AVPlayer!
         
         let fileUrl = URL(fileURLWithPath: Bundle.main.path(forResource: "zeppelinVid", ofType: "mp4")!)
